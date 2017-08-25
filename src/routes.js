@@ -4,7 +4,9 @@ import Home from './views/Home.vue'
 import Main from './views/Main.vue'
 import Table from './views/nav1/Table.vue'
 import Form from './views/nav1/Form.vue'
-import user from './views/nav1/user.vue'
+import Jmeter from './views/nav1/Jmeter.vue'
+import JmeterTestCase from './views/nav1/JmeterTestCase.vue'
+
 import Page4 from './views/nav2/Page4.vue'
 import Page5 from './views/nav2/Page5.vue'
 import Page6 from './views/nav3/Page6.vue'
@@ -53,11 +55,11 @@ let routes = [
     {
         path: '/',
         component: Home,
-        name: '',
+        name: 'Jmeter',
         iconCls: 'fa fa-address-card',
-        leaf: true,//只有一个节点
         children: [
-            { path: '/page6', component: Page6, name: '导航三' }
+            { path: '/page6', component: Jmeter, name: '主机配置' },
+            { path: '/JmeterTestCase', component: JmeterTestCase, name: 'Jmeter用例' }
         ]
     },
     {

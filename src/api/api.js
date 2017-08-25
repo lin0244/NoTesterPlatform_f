@@ -2,6 +2,7 @@ import axios from 'axios';
 
 //let base = '';
 var base = 'http://localhost:8011'
+//var base = 'http://192.168.3.80:8011'
 
 const API = {
     getAbCategory: `${base}/testcase/category/html`,
@@ -28,7 +29,13 @@ const API = {
     batchruntestcase:`${base}/testcase/batchRunTestCase`,
     getTestCaseNameAndId:`${base}/testcase/getAllTestCaseNameAndId`,
     addScenario:`${base}/scenario/addScenario`,
-    getAllScenario:`${base}/scenario/getAllScenario`
+    getAllScenario:`${base}/scenario/getAllScenario`,
+    batchRunScenario:`${base}/scenario/batchRunScenario`,
+    jmeterMasterSlaveConfigAdd:`${base}/jmeter/jmeterMasterSlaveConfigAdd`,
+    getAllMasterSlaveConfig:`${base}/jmeter/getAllMasterSlaveConfig`,
+    getTestCaseByScenarioId:`${base}/testcase/getTestCaseByScenarioId`
+
+
 
 }
 
@@ -65,6 +72,15 @@ export const getAllTestCaseNameAndIdApi = params => { return axios.post(API.getT
 export const addScenarioApi = params => { return axios.post(API.addScenario, params); };
 
 export const getAllScenarioApi = params => { return axios.post(API.getAllScenario, params); };
+
+export const batchRunScenarioApi = params => { return axios.post(API.batchRunScenario, params); };
+
+export const jmeterMasterSlaveConfigAddApi = params => { return axios.post(API.jmeterMasterSlaveConfigAdd, params); };
+
+export const getAllMasterSlaveConfigApi = params => { return axios.post(API.getAllMasterSlaveConfig, params); };
+
+export const getTestCaseByScenarioIdApi = params => { return axios.post(API.getTestCaseByScenarioId, params); };
+
 
 
 

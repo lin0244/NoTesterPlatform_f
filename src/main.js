@@ -13,10 +13,14 @@ import routes from './routes'
 import Mock from './mock'
 //Mock.bootstrap();
 import 'font-awesome/css/font-awesome.min.css'
+import VueDragTree from './views/nav2/vue-drag-tree'
+
 
 Vue.use(ElementUI)
 Vue.use(VueRouter)
 Vue.use(Vuex)
+Vue.use(VueDragTree)
+Vue.component('vue-drag-tree', VueDragTree)
 
 //NProgress.configure({ showSpinner: false });
 

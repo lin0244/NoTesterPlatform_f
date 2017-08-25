@@ -22,6 +22,7 @@
 
 			getTestCaseByPage(){
 				var websocket = new WebSocket('ws://localhost:8011/log');
+				//var websocket = new WebSocket('ws://192.168.3.80:8011/log');
 				websocket.onmessage = function(event) {
 
 
