@@ -33,7 +33,9 @@ const API = {
     batchRunScenario:`${base}/scenario/batchRunScenario`,
     jmeterMasterSlaveConfigAdd:`${base}/jmeter/jmeterMasterSlaveConfigAdd`,
     getAllMasterSlaveConfig:`${base}/jmeter/getAllMasterSlaveConfig`,
-    getTestCaseByScenarioId:`${base}/testcase/getTestCaseByScenarioId`
+    getTestCaseByScenarioId:`${base}/testcase/getTestCaseByScenarioId`,
+    getTargetScenariosData:`${base}/scenario/getTreeScenarioInfo`,
+
 
 
 
@@ -81,7 +83,9 @@ export const getAllMasterSlaveConfigApi = params => { return axios.post(API.getA
 
 export const getTestCaseByScenarioIdApi = params => { return axios.post(API.getTestCaseByScenarioId, params); };
 
+export const addTreeScenarioApi = params => { return axios.post(API.addTreeScenario, params); };
 
+export const getTargetScenariosDataApi = params => { return axios.post(API.getTargetScenariosData, params); };
 
 
 //

@@ -257,6 +257,23 @@
         </div>
 
 
+        <!--选择配置原件-->
+        <div>
+            <el-dialog title="配置原件" v-model="selectConfigElementVisible" :close-on-click-modal="false">
+                <el-tabs type="border-card">
+                    <el-tab-pane label="Assert">
+
+                        <el-button type="primary" @click.native="addAssert" :loading="addLoading">提交</el-button>
+
+                        </el-form>
+
+                    </el-tab-pane>
+                    <el-tab-pane label="Dubbo">配置管理</el-tab-pane>
+
+                </el-tabs>
+            </el-dialog>
+        </div>
+
     </div>
 
 
@@ -295,6 +312,7 @@ export default {
             ScenarioFormVisible:false,
             ProjectFormVisible:false,
             selectTargetTestCaseCatagoryVisible:false,
+            selectConfigElementVisible:false,
             open: false,
             isClicked: false,
             styleObj: {
@@ -550,6 +568,11 @@ export default {
                 this.selectTargetTestCaseCatagoryVisible = true;
             }
 
+            if(this.model.type=="testcase"){
+                //this.selectTargetTestCaseCatagoryVisible = true;
+                this.selectConfigElementVisible = true;
+            }
+
 
         },
         AddProjectFormSubmit(){
@@ -581,6 +604,7 @@ export default {
                 name: this.HttpTestCaseAddForm.testcase,
                 id: id++,
                 type:'testcase',
+                testcaseData:this.HttpTestCaseAddForm
 
             })
             this.testcaseDatas.push(this.HttpTestCaseAddForm);
@@ -605,6 +629,18 @@ export default {
 
             alert("testcaseDatas"+JSON.stringify(this.testcaseDatas));
         },
+
+
+        addAssert(){
+            this.model.children.push({
+                name: "断言1",
+                id: id++,
+                type:'config',
+
+            })
+
+        },
+
         removeChild(id) {
             // 获取父组件的model.children
             let parent_model_children = this.$parent.model.children
