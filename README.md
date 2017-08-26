@@ -38,6 +38,9 @@
 查看执行轨迹
 ![Alt text](https://github.com/xzh666/NoTesterPlatform_f/raw/master/Screenshots/执行轨迹1.png)
 
+![Alt text](https://github.com/xzh666/NoTesterPlatform_f/raw/master/Screenshots/执行轨迹2.png)
+
+
 
 对场景测试的支持
 ![Alt text](https://github.com/xzh666/NoTesterPlatform_f/raw/master/Screenshots/场景测试1.png)
@@ -47,6 +50,9 @@
 
 
 ![Alt text](https://github.com/xzh666/NoTesterPlatform_f/raw/master/Screenshots/场景测试3.png)
+
+![Alt text](https://github.com/xzh666/NoTesterPlatform_f/raw/master/Screenshots/场景列表.png)
+
 
 
 
